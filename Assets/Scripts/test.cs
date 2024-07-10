@@ -53,6 +53,18 @@ public class test : MonoBehaviour
             duration = 0;
             timeStamp = 0;
         }
+
+        public Task Clone()
+        {
+            Task newTask = new Task();
+            newTask.duration = this.duration;
+            newTask.timeStamp = this.timeStamp;
+            foreach (var pos in this.positions)
+            {
+                newTask.positions.Add(new Position { x = pos.x, y = pos.y });
+            }
+            return newTask;
+        }
     }
 
     // Start is called before the first frame update
@@ -139,7 +151,8 @@ public class test : MonoBehaviour
             return;
         }
         Debug.Log("add one task");
-        tasks.Add(task);
+        tasks.Add(task.Clone());
+
         positionsInput.text = "";
         durationInput.text = "";
         timeStampInput.text = "";

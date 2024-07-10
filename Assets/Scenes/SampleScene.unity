@@ -2498,13 +2498,15 @@ MonoBehaviour:
   addButton: {fileID: 102716009}
   delButton: {fileID: 1197426770}
   resetButton: {fileID: 1285316285}
-  runButton: {fileID: 0}
+  runButton: {fileID: 406410650}
   task:
     duration: 0
     timeStamp: 0
     positions: []
   tasks: []
   positions: []
+  mission:
+    tasks: []
 --- !u!4 &2091333470
 Transform:
   m_ObjectHideFlags: 0
